@@ -2,19 +2,33 @@ import requests
 import pandas as pd
 
 
-url = "https://api.mfapi.in/mf/119551"
+schemes = {
+    "SBI_Bluechip": 119551,
+    "ICICI_Bluechip": 120503,
+    "Nippon_Large_Cap": 118632,
+    "Axis_Bluechip": 119092,
+    "Kotak_Bluechip": 120841
+}
 
-response = requests.get(url)
 
-data = response.json()
+for name, code in schemes.items():
 
-df = pd.DataFrame(data["data"])
+    url = f"https://api.mfapi.in/mf/{code}"
 
-print(df.head())
+    response = requests.get(url)
 
-df.to_csv(
-    "data/raw/live_nav_data.csv",
-    index=False
-)
+    data = response.json()
 
-print("NAV data saved successfully")
+    df = pd.DataFrame(data["data"])
+
+    df["scheme"] = name
+
+    df.to_csv(
+        f"data/raw/{name}_nav.csv",
+        index=False
+    )
+
+    print(name, "completed")
+
+
+print("All 5 scheme NAV data saved")
