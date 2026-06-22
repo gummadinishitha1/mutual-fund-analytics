@@ -1,0 +1,41 @@
+DATA QUALITY SUMMARY
+
+1. fund_master.csv
+- Contains 40 mutual fund schemes.
+- Contains fund house, category, risk information.
+- No major missing issues observed.
+
+2. nav_history.csv
+- Contains daily NAV values.
+- Date column is stored as text.
+
+3. aum_by_fund_house.csv
+- Contains fund house AUM details.
+- Date needs conversion.
+
+4. monthly_sip_inflows.csv
+- Contains SIP monthly data.
+- Some YoY growth values are missing.
+
+5. category_inflows.csv
+- Contains category wise inflow data.
+
+6. industry_folio_count.csv
+- Contains investor folio count details.
+
+7. scheme_performance.csv
+- Contains returns and risk metrics.
+
+8. investor_transactions.csv
+- Contains transaction records.
+- Date needs formatting.
+
+9. portfolio_holdings.csv
+- Contains portfolio stock details.
+
+10. benchmark_indices.csv
+- Contains market index data.
+
+Overall:
+All 10 datasets loaded successfully using Pandas.
+Further cleaning and analysis can be performed.
