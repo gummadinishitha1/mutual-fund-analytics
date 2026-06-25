@@ -1,14 +1,138 @@
-# Mutual Fund Analytics Project 📊
+# Mutual Fund Analytics Project
 
-## Overview
+## Day 2: Data Cleaning + SQLite Database
 
-This project focuses on building a Mutual Fund Analytics pipeline using Python.
+## Project Description
 
-It includes:
-- Data ingestion
-- Data quality checking
-- Live NAV extraction using API
-- AMFI code validation
+This project focuses on cleaning mutual fund datasets, creating a SQLite database using a star schema design, loading cleaned data, and performing analytical SQL queries.
+
+---
+
+## Tasks Completed
+
+### 1. Data Cleaning
+
+### nav_history.csv
+- Converted date column into datetime format
+- Sorted data by amfi_code and date
+- Filled missing NAV values for holidays/weekends
+- Removed duplicate records
+- Validated NAV values greater than 0
+
+
+### investor_transactions.csv
+- Standardized transaction types:
+
+  - SIP
+  - Lumpsum
+  - Redemption
+
+- Validated amount values
+- Fixed date formats
+- Checked KYC status values
+
+
+### scheme_performance.csv
+- Converted return columns into numeric format
+- Identified incorrect values
+- Checked expense ratio range:
+
+
+
+---
+
+## Database Design
+
+Created SQLite database:
+
+
+
+Designed Star Schema with:
+
+### Dimension Tables
+
+- dim_fund
+- dim_date
+
+
+### Fact Tables
+
+- fact_nav
+- fact_transactions
+- fact_performance
+- fact_aum
+
+
+Primary keys and foreign keys were created for relationships between tables.
+
+---
+
+## Data Loading
+
+Loaded cleaned CSV files into SQLite using:
+
+- SQLAlchemy
+- pandas to_sql()
+
+
+Verified:
+
+- Table creation
+- Data loading
+- Row counts
+
+---
+
+## SQL Analysis Queries
+
+Created 10 SQL queries:
+
+1. Top 5 funds by AUM
+2. Average NAV per month
+3. SIP year-over-year growth
+4. Transactions by state
+5. Funds with expense ratio less than 1%
+6. Highest return funds
+7. Category-wise performance
+8. Monthly transaction trends
+9. NAV growth analysis
+10. Investor transaction summary
+
+---
+
+## Data Dictionary
+
+Created:
+
+
+Contains:
+
+- Column names
+- Data types
+- Column descriptions
+- Source information
+
+---
+
+## Project Files
+
+mutual_fund_analytics/
+
+│
+├── data/
+│ └── processed/
+│ └── cleaned CSV files
+│
+├── sql/
+│ ├── schema.sql
+│ └── queries.sql
+│
+├── bluestock_mf.db
+│
+├── data_dictionary.md
+│
+└── README.md
+
 
 ---
 
@@ -16,130 +140,30 @@ It includes:
 
 - Python
 - Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly
-- Requests
-- SciPy
+- SQLite
 - SQLAlchemy
+- SQL
 - Jupyter Notebook
 
 ---
 
-## Project Structure
-
-
+## Git Commit
 
 
 ---
 
-## Features Completed
+## Deliverables Completed
 
-✅ Created project folder structure
-
-✅ Installed required libraries
-
-✅ Loaded 10 CSV datasets using Pandas
-
-Checked:
-
-- shape
-- datatypes
-- first rows
-
-✅ Performed data quality checks
-
-Checked:
-
-- missing values
-- duplicates
-- anomalies
-
-✅ Fetched live NAV data from MF API
-
-API:
-
-https://api.mfapi.in/mf/
-
-✅ Fetched NAV for:
-
-- SBI Bluechip
-- ICICI Bluechip
-- Nippon Large Cap
-- Axis Bluechip
-- Kotak Bluechip
-
-✅ AMFI code validation completed
-
-Result:
-
-All AMFI codes are valid
+✅ 10 cleaned CSV files  
+✅ bluestock_mf.db  
+✅ schema.sql  
+✅ queries.sql  
+✅ data_dictionary.md  
+✅ README.md  
 
 ---
 
-## Running the Project
+## Status
 
-Install dependencies:
+Day 2 Mutual Fund Analytics tasks completed successfully.
 
-```bash
-pip install -r requirements.txt
-
-Run data ingestion:
-
-```bash
-python src/data_ingestion.py
-
-
-paste this:
-
-```markdown
-Run NAV fetch:
-
-```bash
-python src/live_nav_fetch.py
-
-Run AMFI validation:
-
-```bash
-python src/amfi_validation.py
-
----
-
-## Data Quality Checks
-
-The project checks:
-
-- Missing values
-- Duplicate records
-- Data types
-- Invalid AMFI codes
-
-Report generated:
-
-reports/data_quality_summary.txt
-
----
-
-## GitHub Commit
-
-Day 1 completion:
-
-Day 1: Data ingestion complete
-
----
-
-## Future Improvements
-
-- Data cleaning pipeline
-- SQL database integration
-- Dashboard creation
-- Mutual fund performance analysis
-
----
-
-## Author
-
-Gummadi Nishitha
-
-Mutual Fund Analytics Project
