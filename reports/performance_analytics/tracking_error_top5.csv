@@ -1,0 +1,11 @@
+amfi_code,scheme_name,fund_house,benchmark,tracking_error,observations
+148567,Mirae Asset Large Cap Fund - Regular - Growth,Mirae Asset MF,NIFTY50,0.19399579209820508,1149
+148567,Mirae Asset Large Cap Fund - Regular - Growth,Mirae Asset MF,NIFTY100,0.1896636779215802,1149
+120505,ICICI Pru Midcap Fund - Regular - Growth,ICICI Prudential MF,NIFTY50,0.23312357538323944,1149
+120505,ICICI Pru Midcap Fund - Regular - Growth,ICICI Prudential MF,NIFTY100,0.2319675096004632,1149
+120843,Kotak Flexicap Fund - Regular - Growth,Kotak Mahindra MF,NIFTY50,0.20514776699717424,1149
+120843,Kotak Flexicap Fund - Regular - Growth,Kotak Mahindra MF,NIFTY100,0.20642496841144062,1149
+100033,HDFC Mid-Cap Opportunities Fund - Regular - Growth,HDFC Mutual Fund,NIFTY50,0.2297551098545287,1149
+100033,HDFC Mid-Cap Opportunities Fund - Regular - Growth,HDFC Mutual Fund,NIFTY100,0.22869942052083106,1149
+120504,ICICI Pru Bluechip Fund - Direct - Growth,ICICI Prudential MF,NIFTY50,0.19137581549582713,1149
+120504,ICICI Pru Bluechip Fund - Direct - Growth,ICICI Prudential MF,NIFTY100,0.1915870037972257,1149
