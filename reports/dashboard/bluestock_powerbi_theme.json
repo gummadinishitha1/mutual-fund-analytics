@@ -1,0 +1,41 @@
+{
+  "name": "Bluestock MF Theme",
+  "dataColors": [
+    "#0A4D8F",
+    "#22A7F0",
+    "#22A06B",
+    "#F5A524",
+    "#D64545",
+    "#082B4C",
+    "#6C7A89",
+    "#8E44AD"
+  ],
+  "background": "#F4F8FC",
+  "foreground": "#162033",
+  "tableAccent": "#0A4D8F",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#162033"
+              }
+            },
+            "fontSize": 12
+          }
+        ],
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#5B6B7F"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
